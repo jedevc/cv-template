@@ -1,6 +1,11 @@
-baseURL = "http://example.com"
-languageCode = "en-gb"
+# Write your page title here
 title = "My CV"
+# Write the url that your site is deployed to here
+baseURL = "http://example.com"
+
+languageCode = "en-gb"
+relativeURLs = true
+disableKinds = ["taxonomy", "taxonomyTerm"]
 
 [minify]
 minifyOutput = true

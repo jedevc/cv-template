@@ -2,11 +2,6 @@
 
 Template for my personal CV :tada: You can see it in action [here](https://cv.jedevc.com).
 
-The single page on the site is generated using the parameters in
-[config/_default/params.yaml](./config/_default/params.yaml),
-while site-wide configuration can be found in
-[config/_default/config.toml](./config/_default/config.toml).
-
 ## Development
 
 To get started, [click here](https://github.com/jedevc/cv-template/generate) to
@@ -21,10 +16,19 @@ Run a live site preview (ensuring [hugo](https://gohugo.io) is installed):
 
     $ hugo serve
 
-You can also just build the site:
+You should then be ready to get started!
 
-    $ hugo
-    
+- First, fill out the contents of [config/_default/config.toml](./config/_default/config.toml),
+  with your site name and url - while the CV will work with the defaults,
+  you'll want to update them for best results.
+
+- Next, you can customize [config/_default/params.yaml](./config/_default/params.yaml),
+  with your CV!
+  
+- Finally, if you really want to dive deep, you can modify the templates in 
+  [layouts/default/](./layouts/_default/) or switch up the styling in
+  [assets/style/](./assets/style/) and get creative!
+
 ## Deployment
 
 To deploy the site, just push your changes to your `main` branch - the
