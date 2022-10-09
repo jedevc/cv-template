@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ .Site.Title }}</title>
+
+    {{ $sass := resources.Get "style/reset.scss" }}
+    {{ $style := $sass | resources.ToCSS }}
+    <link rel="stylesheet" type="text/css" href="{{ $style.RelPermalink }}" />
+
+    {{ block "head" . }}{{ end }}
+</head>
+<body>
+    <header></header>
+    <main>
+        {{ block "main" . }}{{ end }}
+    </main>
+    <footer></footer>
+
+    <div class="fadeout"></div>
+</body>
+</html>

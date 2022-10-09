@@ -1,0 +1,6 @@
+baseURL = "http://example.com"
+languageCode = "en-gb"
+title = "My CV"
+
+[minify]
+minifyOutput = true

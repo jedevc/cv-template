@@ -1,0 +1,49 @@
+{{ define "head" }}
+    {{ $sass := resources.Get "style/theme.scss" }}
+    {{ $style := $sass | resources.ExecuteAsTemplate "style/theme.scss" . | resources.ToCSS | minify | fingerprint }}
+    <link rel="stylesheet" type="text/css" href="{{ $style.RelPermalink }}" />
+
+    {{ $sass := resources.Get "style/main.scss" }}
+    {{ $style := $sass | resources.ToCSS | minify | fingerprint }}
+    <link rel="stylesheet" type="text/css" href="{{ $style.RelPermalink }}" />
+{{ end }}
+
+{{ define "main" }}
+    <section class="basics">
+        {{ with .Site.Params.personal }}
+            <h1>{{ .name }}</h1>
+            <div class="information">
+                <div>
+                    <a href="{{ .website }}">{{ .website }}</a>
+                </div>
+                <div class="contact">
+                    {{- with .email -}}
+                        <a class="information-part" href="mailto:{{ . }}">{{ . }}</a>
+                    {{- end -}}
+                    {{- with .phone -}}
+                        <div class="information-part">{{ . }}</div>
+                    {{- end -}}
+                </div>
+                <div class="location">
+                    {{- range .location -}}
+                        <div class="information-part">{{ . }}</div>
+                    {{- end -}}
+                </div>
+            </div>
+            {{ with .content }}
+                <div class="content">{{ . | markdownify }}</div>
+            {{ end }}
+        {{ end }}
+    </section>
+
+    {{ range .Site.Params.sections }}
+        <section>
+            <h2 class="header">{{ .name }}</h2>
+            {{ if .entries }}
+                {{ partial "sections/entries" . }}
+            {{ else if .boxes }}
+                {{ partial "sections/boxes" . }}
+            {{ end }}
+        </section>
+    {{ end }}
+{{ end }}

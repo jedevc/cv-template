@@ -1,0 +1,101 @@
+## __   __                  ______     __
+## \ \ / /__  _   _ _ __   / ___\ \   / /
+##  \ V / _ \| | | | '__| | |    \ \ / / 
+##   | | (_) | |_| | |    | |___  \ V /  
+##   |_|\___/ \__,_|_|     \____|  \_/   
+##
+## Your CV is generated from this YAML file.
+##
+## The default template content comes from the jsonresume project:
+## https://github.com/jsonresume/resume-schema/blob/master/sample.resume.json
+
+# Fill in your personal details.
+personal:
+  name: Richard Hendriks
+  email: richard.hendriks@example.com
+  phone: "(912) 555-4321"
+  location:
+    - San Francisco
+    - US
+  website: "http://richardhendricks.example.com"
+
+  # You can write something personal here, to help set you apart!
+  content: |
+    Here's why you should hire me...
+
+# Customize the look and feel of your CV.
+styles:
+  # Any valid CSS color works here.
+  highlight: "darkred"
+
+# Create the body of your CV.
+#
+# This bit is made up of multiple sections. You can just use the pre-provided
+# templates here, or you can re-order, remove and create new sections as well.
+sections:
+
+  - name: Education
+    entries:
+      - title: "Information Technology BSc"
+        subtitle: "University of Oklahoma"
+        startDate: "2011-06-01"
+        endDate: "2014-01-01"
+        content: |
+          GPA: **4.0**
+
+          Courses:
+            - **DB1101** - Basic SQL,
+            - **CS2011** - Java Introduction
+
+  - name: Work
+    entries:
+      - title: "Pied Piper"
+        subtitle: "CEO"
+        startDate: "2013-12-01"
+        endDate: "2014-12-01" # you can leave the end date blank if ongoing
+        website: https://docker.com
+        content: |
+          **Pied Piper** is a multi-platform technology based on a proprietary
+          universal compression algorithm that has consistently fielded high
+          Weisman Scores™ that are not merely competitive, but approach the
+          theoretical limit of lossless compression.
+
+          - Built an algorithm for artist to detect if their music was violating copy right infringement laws
+          - Successfully won Techcrunch Disrupt
+          - Optimized an algorithm that holds the current world record for Weisman Scores
+
+  - name: Volunteering
+    entries:
+      - title: "CoderDojo"
+        subtitle: "Teacher"
+        content: |
+          Global movement of free coding clubs for young people.
+
+  - name: Skills
+    minimal: true
+    entries:
+      - title: "Web Development -- Master"
+        keywords:
+          - "HTML"
+          - "CSS"
+          - "Javascript"
+      - title: "Compression -- Master"
+        keywords:
+          - "MPEG"
+          - "MP4"
+          - "GIF"
+
+  - name: Achievements
+    boxes:
+      - title: "Digital Compression Pioneer Award"
+        subtitle: "Techcrunch"
+        endDate: "2014-11-01"
+        content: |
+          There is no spoon.
+
+  - name: Interests
+    entries:
+      - title: "Wildlife"
+        content: |
+          - Ferrets
+          - Unicorns
