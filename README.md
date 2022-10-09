@@ -1,6 +1,9 @@
 # CV
 
-Template for my personal CV :tada: You can see it in action [here](https://cv.jedevc.com).
+Template for my CV layout, supporting both viewing in-browser and via printed
+documents :tada: 
+
+You can see it in action [here](https://jedevc.github.io/cv-template).
 
 ## Development
 
